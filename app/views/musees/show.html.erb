@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @musee.Titre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @musee.Description %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @musee.Date %>
+</p>
+
+<p>
+  <strong>Dimensions:</strong>
+  <%= @musee.Dimensions %>
+</p>
+
+<p>
+  <strong>Œuvre:</strong>
+  <%= @musee.Œuvre %>
+</p>
+
+<p>
+  <strong>Auteur:</strong>
+  <%= @musee.Auteur %>
+</p>
+
+<%= link_to 'Edit', edit_musee_path(@musee) %> |
+<%= link_to 'Back', musees_path %>

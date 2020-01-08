@@ -1,0 +1,47 @@
+<%= form_with(model: art, local: true) do |form| %>
+  <% if art.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(art.errors.count, "error") %> prohibited this art from being saved:</h2>
+
+      <ul>
+      <% art.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Titre %>
+    <%= form.text_field :Titre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Description %>
+    <%= form.text_area :Description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.text_field :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dimensions %>
+    <%= form.text_field :Dimensions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Œuvre %>
+    <%= form.text_field :Œuvre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Auteur %>
+    <%= form.text_field :Auteur %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

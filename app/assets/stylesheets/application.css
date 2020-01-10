@@ -18,40 +18,63 @@
      padding: 0;
 }
 
- .accueil{
-    background-image:url(https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiJusjLqvTmAhUNA2MBHXPuACcQjRx6BAgBEAQ&url=https%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FFichier%3AMus%25C3%25A9e_Goya_6.jpg&psig=AOvVaw0pMbOgHfbgAPHfwSFTNP9b&ust=1578584187291757);
-    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-    background-size: cover; /* version standardisée */
-    width:100vw;
-    height:100vh;
-    background-repeat:no-repeat;
- }
+h1{
+  font-size:60px;
+}
+h2{
+  font-size:20px;
+}
 
- ul.topnav {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   background-color: #333;
- }
- 
- ul.topnav li {float: left;}
- 
- ul.topnav li a {
-   display: block;
-   color: white;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
- }
- 
- ul.topnav li a:hover:not(.active) {background-color: #111;}
- 
- ul.topnav li a.active {background-color: #4CAF50;}
- 
- ul.topnav li.right {float: right;}
- 
- @media screen and (max-width: 600px) {
-   ul.topnav li.right, 
-   ul.topnav li {float: none;}
- }
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.header{
+  min-height:100vh;
+  background-image: url(http://46.18.195.79/AloesSynchro/stockage/GdT/Peintures/INV%207296.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+.responsive{
+  border:2px solid black;
+  width:400px;
+  height:500px;
+}
+.cyka{
+  width:100%;
+}
+
+.cyka img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}

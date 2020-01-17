@@ -12,60 +12,32 @@
       <h2>Plus de 50 oeuvres sont présentes sur cette page</h2>
     </div>
   </div>
-
-  <ul>
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
 </table>
-
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
-
-    <% @musees.each do |musee| %>
-      <div class="responsive">
-        <div class="cyka"> <img src="<%= musee.Œuvre %>"> </div>
-        <div><%= musee.Titre %></div>
-        <div><%= musee.Description %></div>
-        <div><%= musee.Date %></div>
-        <div><%= musee.Dimensions %></div>
-        <div><%= musee.Auteur %></div>
-        <p><%= link_to 'Show', musee %></p>
-        <p><%= link_to 'Edit', edit_musee_path(musee) %></p>
-        <p><%= link_to 'Destroy', musee, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      </div>
-    <% end %>
-
-
+<div class="bk">
 <%= link_to 'Ajouter une oeuvre', new_musee_path %>
+
+  <div class="theme">
+    <h1> Ceci est un test </h1>
+    <p> oui </p>
+  </div>
+    <div class="alignement">
+      <% @musees.each do |musee| %>
+        <div class="alignement2">
+          <img src="<%= musee.Œuvre %>" />
+          <p class="titre"><%= musee.Titre %></p>
+          <hr>
+          <p class="description" > <u>Description :</u> <br> <span class="margin"><%= musee.Description %> </p>
+          <p class="description"> <u>Date :</u> <br> <%= musee.Date %></p>
+          <p class="description"> <u>Dimensions :</u> <br><%= musee.Dimensions %></p>
+          <p class="description"> <u>Auteur :</u> <br><%= musee.Auteur %></p>
+          <div class="jaune">
+            <%= link_to 'Montrer', musee %>
+            <%= link_to 'Modifier', edit_musee_path(musee) %>
+            <%= link_to 'Supprimer', musee, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
